@@ -8,8 +8,28 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class day1 {
-    public static int part1(File file) throws IOException{
+    public static void run() throws IOException {
+        File file = new File("./resources/day1Test.txt");
+        int calories = part1(file);
+        System.out.println("Day 1 - Part 1 - Test expectation - The elf with the most calories  carries: 24000");
+        System.out.printf("Day 1 - Part 1 - Test Result - The elf with the most calories carries: [%d]%n", calories);
 
+        file = new File("./resources/day1Real.txt");
+        calories = part1(file);
+        System.out.printf("Day 1 - Part 1 - Real - The elf with the most calories carries: [%d]%n", calories);
+
+        file = new File("./resources/day1Test.txt");
+        calories = part2(file);
+        System.out.println("Day 1 - Part 2 - Test expectation - The elf with the most calories  carries: 45000");
+        System.out.printf("Day 1 - Part 2 - Test - The elf with the most calories carries: [%d]%n", calories);
+
+        file = new File("./resources/day1Real.txt");
+        calories = part2(file);
+        System.out.printf("Day 1 - Part 2 - Real - The elf with the most calories carries: [%d]%n", calories);
+    }
+
+    // Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
+    private static int part1(File file) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         int finalSum = 0;
@@ -32,7 +52,8 @@ public class day1 {
         return finalSum;
     }
 
-    public static int part2(File file) throws IOException {
+    // Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
+    private static int part2(File file) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         ArrayList<Integer> listSum= new ArrayList<>();
