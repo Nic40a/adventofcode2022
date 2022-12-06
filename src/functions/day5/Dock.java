@@ -6,8 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static javax.swing.UIManager.get;
-
 public class Dock {
     private ArrayList<ArrayList<String>> stacks;
 
@@ -17,7 +15,6 @@ public class Dock {
         String line;
         int start;
         int increment = 4;
-        int height = 0;
         int amountOfStack = 0;
         while ((line = br.readLine()) != null) {
             ArrayList<String> row = new ArrayList<>();

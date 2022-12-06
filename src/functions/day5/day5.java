@@ -1,12 +1,9 @@
 package src.functions.day5;
 
-import src.functions.day4.Assignment;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class day5 {
     public static void run() throws IOException {
